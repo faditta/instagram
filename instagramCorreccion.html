@@ -39,10 +39,49 @@
                 </li>
             </ul>
         </nav>
+        <div>
+            <img src="" alt="">
+        </div>
+    </aside>
+    <header>
+        <div id="barra">
+            <button>X</button>
+        </div>
+        <div id="menu-mobile">
+            <h1>Instagram</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <img src="img/flor.jpg" alt="logo home">
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <img src="img/flor.jpg" alt="logo home">
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <img src=" img/flor.jpg" alt="logo home">
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <img src="img/flor.jpg" alt="logo home">
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <img src="img/flor.jpg" alt="logo home">
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <img src="img/flor.jpg" alt="logo home">
+                        <a href="">Home</a>
+                    </li>
+                </ul>
+            </nav>
             <div>
                 <img src="" alt="">
             </div>
-    </aside>
+        </div>
+    </header>
     <main>
         <header>
             <img src="img/uib.jpg" alt="logo">
@@ -76,7 +115,7 @@
                 <img src="img/flor.jpg" alt="story">
                 <span>Ara Interessa</span>
             </div>
-            
+
             <div>
                 <img src="img/flor.jpg" alt="story">
                 <span>Ara Interessa</span>
@@ -109,7 +148,7 @@
                 <img src="img/flor.jpg" alt="story">
                 <span>Ara Interessa</span>
             </div>
-            
+
             <div>
                 <img src="img/flor.jpg" alt="story">
                 <span>Ara Interessa</span>
@@ -213,6 +252,18 @@
             </div>
         </div>
     </main>
-   
-    </body>
+
+</body>
+<script>
+    document.querySelector("#barra button").addEventListener('click',function(){
+        const mobile = document.querySelector("#menu-mobile");
+        const visible = mobile.style.display !=='block';
+        if(visible){
+            mobile.style.display = 'block';
+        }else{
+            mobile.style.display = 'none';
+        } 
+    })
+</script>
+
 </html>

@@ -137,6 +137,59 @@ main>div:nth-child(3)>div:nth-child(2){
     flex-wrap: wrap;
     gap: 20px;
 }
+aside>div{
+    justify-self: flex-end;
+}
+
+/*Menu movil*/
+body>header{
+    display: none;
+}
+body>header img{
+    width: 30px;
+    height: 30px;
+}
+
+
+#menu-mobile{
+    display: none;
+}
+
+
+
+
+/*@media screen and (min-width:600px) {
+    aside{
+        display: none;
+    }
+   
+    
+}*/
+@media screen and (max-width:600px) {
+    aside{
+        display: none;
+    }
+    body>header{
+        display: block;
+    }
+    body{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+   
+    header{
+        grid-column: 1 / 2;
+        grid-row: 1/2;
+    }
+    main{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    
+   
+}
+
 
 
 
