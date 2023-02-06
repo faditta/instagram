@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img{
+    object-fit: cover;
+}
+main{
+    width: 700px;
+    grid-column: 3/4;
+    
+    
+}
+/*menu*/
+aside{
+    background-color: rgb(255, 255, 255);
+    border-right: solid 2px rgb(184, 163, 163);
+     
+}
+/*
+body{
+    height: 600px;
+}
+body aside{
+    height: 100%;
+}
+body main{
+    height:100%;
+}
+aside>div{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+}
+*/
+/*opcion 3*/
+aside{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+aside>div{
+  
+    align-self: flex-end;
+}
+aside img{
+    width: 30px;
+    height: 30px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 200px auto 700px  auto; /* los 200px son fijos y el auto es lo que se adapta */
+    grid-template-rows: auto; /* realmente en este caso no es necesario ponerlo */
+    background-color: rgb(197, 189, 189);
+}
+
+header {
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: auto auto auto auto;
+}
+
+header>img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    grid-column: 1/2;
+    grid-row: 1/5;
+}
+
+ header div:nth-child(2) { /* el nth-child se refiere (cualquier) al hijo y SI es un div te lo pillo */
+    grid-column: 2/3; /* como refiere a todos los hijos podríamos quitarle el div pero es más pulido poner el tipo */
+    grid-row: 1/2
+}
+
+ header div:nth-child(3) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+header div:nth-child(4) {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+header div:nth-child(5) {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+main>div:nth-child(2) {
+    overflow: hidden;
+    width: 800px;
+    display: flex;
+    gap: 10px;/*espacio */
+    
+   
+}
+main>div:nth-child(2)>div{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+
+}
+main>div:nth-child(2)>div>img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    
+    
+}
+main>div:nth-child(3)>div:first-child{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+main>div:nth-child(3)>div:first-child img{
+    width: 40px;
+    height: 40px;
+}
+main>div:nth-child(3)>div:nth-child(2) img{
+    width: 200px;
+    height: 200px;
+    object-position: top;
+}
+
+
+main>div:nth-child(3)>div:nth-child(2){
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+
+
+
+
+
+/*
+main>div:nth-child(4){/tenia el div de las imagenes era el 4 div pero lo hemos cambiado y ahora esta en el div 3 el segundo hijo
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    grid-gap: 18px;
+}
+main>div:nth-child(4)>img{
+    width: 330px;
+    height: 330px;
+}
+
+/* la meva versio
+main>div:nth-child(2) {
+    background-color: azure;
+    display: flex;
+    gap: 10px;/*espacio 
+   
+}
+main>div:nth-child(2)>div>span{
+    display: flex;
+}
+main>div:nth-child(2)>div>img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}*/
+main>div:nth-child(3)>div:first-child{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+main>div:nth-child(4){
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    grid-gap: 18px;
+}
+main>div:nth-child(4)>img{
+    width: 330px;
+    height: 330px;
+}
